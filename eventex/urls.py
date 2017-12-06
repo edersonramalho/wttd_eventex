@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from eventex.core.views import home
 
 urlpatterns = [
-    url(r'^$', 'eventex.core.views.home'),#home do site
+    #url(r'^$', 'eventex.core.views.home'),#home do site isso era até Django 1.8
+    url(r'^$', home),
     url(r'^admin/', admin.site.urls),
 ]
